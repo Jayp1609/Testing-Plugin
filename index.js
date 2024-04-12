@@ -1,6 +1,7 @@
 // server.js
 const express = require("express");
 const bodyParser = require("body-parser");
+var cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -22,7 +23,7 @@ let comments = [
     date: "2024-04-11",
   },
 ];
-
+app.use(cors());
 app.use(bodyParser.json());
 
 // Endpoint to fetch comments for a blog post
