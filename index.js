@@ -30,7 +30,7 @@ app.get('/api/comments-script', (req, res) => {
   const script = `
     <script>
       function fetchComments() {
-        fetch('/api/comments')
+         fetch(\`https://testing-plugin.onrender.com/api/comments\`)
           .then(handleResponse)
           .then(renderComments)
           .catch(handleError);
